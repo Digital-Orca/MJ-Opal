@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Abril_Fatface } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const abril = Abril_Fatface({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={abril.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

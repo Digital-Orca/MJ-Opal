@@ -2,8 +2,8 @@ import DiamondCanvas from "@/components/DiamondCanvas";
 
 export default function About() {
   return (
-    <section className="relative h-screen flex items-center justify-center flex-col">
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 -z-10">
+    <section className="relative h-screen flex items-center justify-center flex-col select-none">
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2">
         <DiamondCanvas />
       </div>
       <h1 className="!text-dark_blue text-[60px] w-[925px] text-center mx-auto mt-32">

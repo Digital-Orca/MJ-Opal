@@ -1,0 +1,7 @@
+.testimonials-background {
+  background-image: url("../../../assets/testimonials_rectangle.svg");
+  background-position: center;
+  background-size: cover;
+  height: 130px;
+  padding: 20px 30px 35px 20px;
+}

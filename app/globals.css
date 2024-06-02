@@ -83,3 +83,8 @@ body {
 .diamond-canvas {
   height: calc(100vh - 140px) !important;
 }
+
+input {
+  outline: none;
+  caret-color: #154C79;
+}

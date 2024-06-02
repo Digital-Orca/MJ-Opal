@@ -13,7 +13,7 @@ export default function DiamondCanvas() {
         enableZoom={false}
         enablePan={false}
         enableDamping={false}
-        enableRotate={false}
+        enableRotate={true}
       />
       <Suspense fallback={null}>
         <Diamond />

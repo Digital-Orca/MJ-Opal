@@ -2,7 +2,7 @@ import {
   services_we_provider_center,
   services_we_provider_left,
   services_we_provider_right,
-} from "@/context";
+} from "@/constants";
 import "./hero.css";
 
 export default function Hero() {
