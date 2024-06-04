@@ -49,7 +49,7 @@ export default function Structure() {
             type="text"
             required
             value={name}
-            onChange={(e) => setName(e.target.value.trim())}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div>
@@ -59,7 +59,7 @@ export default function Structure() {
             type="tel"
             required
             value={phone}
-            onChange={(e) => setPhone(e.target.value.trim())}
+            onChange={(e) => setPhone(e.target.value)}
           />
         </div>
         <div>
@@ -69,7 +69,7 @@ export default function Structure() {
             type="email"
             required
             value={email}
-            onChange={(e) => setEmail(e.target.value.trim())}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div>
@@ -78,7 +78,7 @@ export default function Structure() {
             placeholder="Enter your message..."
             required
             value={message}
-            onChange={(e) => setMessage(e.target.value.trim())}
+            onChange={(e) => setMessage(e.target.value)}
           />
         </div>
 
