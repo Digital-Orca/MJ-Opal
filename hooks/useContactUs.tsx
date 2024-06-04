@@ -57,7 +57,7 @@ export default function useContactUs() {
       const res = await fetch("https://sendmail-api-docs.vercel.app/api/send", {
         method: "POST",
         body: JSON.stringify({
-          to: "dev.elbehery@gmail.com",
+          to: "info@mjopal.com",
           subject: "Subscription Request",
           message: subscribed,
         }),

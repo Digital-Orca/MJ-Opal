@@ -1,5 +1,6 @@
 "use client";
 
+import Loading from "@/components/Loading";
 import { useEffect, useState } from "react";
 
 export default function ClientProvider({
@@ -10,8 +11,12 @@ export default function ClientProvider({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
-  return mounted && <>{children}</>;
+  return mounted ? <>{children}</> : <Loading />;
 }
