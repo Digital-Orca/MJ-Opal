@@ -82,36 +82,22 @@ export const testimonials_data = [
    `,
   },
   {
-    personName: "Omar A.",
-    opinion: `Whatsoever, it's been less than a week starting on
-    the campaign with you and i am already finding
-    better results in terms of ROAS and sales. We are
-    building a strong base!
-   `,
+    personName: "Mohammad S.",
+    opinion: `You did amazing work in fixing and developing the copywriting of our website, you took it to another level and helped us increase our conversion rate! Highly recommended.`,
   },
   {
-    personName: "Omar A.",
-    opinion: `Whatsoever, it's been less than a week starting on
-    the campaign with you and i am already finding
-    better results in terms of ROAS and sales. We are
-    building a strong base!
-   `,
+    personName: "Nader B.",
+    opinion: `I worked with you on my core product and i have to say your dedication, inputu, advice and experience has ekevated the brand content. Your willingness to go over and beyond to support the objective of the business is exquisite. You guys are highly recommended for elevating brands to perfection`,
   },
   {
-    personName: "Omar A.",
-    opinion: `Whatsoever, it's been less than a week starting on
-    the campaign with you and i am already finding
-    better results in terms of ROAS and sales. We are
-    building a strong base!
-   `,
+    personName: "Layla K.",
+    opinion:
+      "Working with you has been a game changer for our business! Your strategies and execution have significantly boosted our online presence and engagement. We're thrilled with the results and can't thank you enough!",
   },
   {
-    personName: "Omar A.",
-    opinion: `Whatsoever, it's been less than a week starting on
-    the campaign with you and i am already finding
-    better results in terms of ROAS and sales. We are
-    building a strong base!
-   `,
+    personName: "Ahmad T.",
+    opinion:
+      "Your team's expertise and dedication have truly transformed our marketing efforts. We have seen a remarkable improvement in our lead generation and overall brand awareness. I highly recommend your services to anyone looking to take their business to the next level.",
   },
 ];
 
