@@ -3,6 +3,8 @@ import { Abril_Fatface } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ClientProvider from "@/providers/ClientProvider";
+import MobileHeader from "@/components/MobileHeader";
 
 const abril = Abril_Fatface({
   subsets: ["latin"],
@@ -22,9 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={abril.className}>
-        <Header />
-        {children}
-        <Footer />
+        <ClientProvider>
+          <Header />
+          <MobileHeader />
+          {children}
+          <Footer />
+        </ClientProvider>
       </body>
     </html>
   );

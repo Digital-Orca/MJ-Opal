@@ -81,4 +81,117 @@ export const testimonials_data = [
     building a strong base!
    `,
   },
+  {
+    personName: "Omar A.",
+    opinion: `Whatsoever, it's been less than a week starting on
+    the campaign with you and i am already finding
+    better results in terms of ROAS and sales. We are
+    building a strong base!
+   `,
+  },
+  {
+    personName: "Omar A.",
+    opinion: `Whatsoever, it's been less than a week starting on
+    the campaign with you and i am already finding
+    better results in terms of ROAS and sales. We are
+    building a strong base!
+   `,
+  },
+  {
+    personName: "Omar A.",
+    opinion: `Whatsoever, it's been less than a week starting on
+    the campaign with you and i am already finding
+    better results in terms of ROAS and sales. We are
+    building a strong base!
+   `,
+  },
+  {
+    personName: "Omar A.",
+    opinion: `Whatsoever, it's been less than a week starting on
+    the campaign with you and i am already finding
+    better results in terms of ROAS and sales. We are
+    building a strong base!
+   `,
+  },
+];
+
+export const packages = [
+  {
+    scale: "Small",
+    name: "Opal's First Step",
+    services: [
+      "Market Research",
+      "Pixel Integration",
+      "Conversion Rates Optimization",
+      "Meta Ads",
+      "Tiktok Ads (Without Ad Account)",
+      "Social Media Management + Graphic",
+    ],
+    no_services: [
+      "Google Ads",
+      "Copywriting (Website Content, 1 Blogpost/Article)",
+      "Session Photo-Videography + Photoshop",
+      "CGI Video",
+      "Content Creation",
+      "Influencers Marketing",
+      "Graphic Designs",
+    ],
+  },
+  {
+    scale: "Moderate",
+    name: "Opal's Nextlevel Suit",
+    services: [
+      "Market Retargeting",
+      "Pixel Revision",
+      "Conversion Rates Optimization",
+      "Copywriting (Website Content, 1 Blogpost/Article)",
+      "Meta Ads",
+      "Tiktok Ads (Without Ad Account)",
+      "Social Media Management + Graphic",
+    ],
+    no_services: [
+      "Google Ads",
+      "Session Photo-Videography + Photoshop",
+      "CGI Videos",
+      "Content Creation",
+      "Influencers Marketing",
+      "Graphic Designs",
+    ],
+  },
+  {
+    scale: "Large",
+    name: "Opal's Supreme",
+    services: [
+      "Market Research",
+      "Pixel Integration",
+      "Conversion Rates Optimization",
+      "Copywriting (SEO Friendly)",
+      "Meta Ads",
+      "Tiktok Ads (Free Ad Account) + Video Editing",
+      "1 Session Photo-Videography + Photoshop",
+      "1 CGI Video",
+      "Content Creation",
+      "Social Media Management + Graphic",
+    ],
+    no_services: ["Google Ads", "Influencers Marketing", "Graphic Designs"],
+  },
+  {
+    scale: "Multinational",
+    name: "Opal's Supreme Plus",
+    services: [
+      "Market Retargeting",
+      "Pixel Revision",
+      "Conversion Rates Optimization",
+      "Meta Ads",
+      "Google Ads",
+      "Tiktok Ads (Free Ad Account) + Video Editing",
+      "Influencers Marketing",
+      "Email Marketing",
+      "2 Sessions Photo-Videography + Photoshop",
+      "2 CGI Videos",
+      "Content Creation",
+      "Social Media Management + Graphic",
+      "Graphic Designs",
+    ],
+  },
 ];

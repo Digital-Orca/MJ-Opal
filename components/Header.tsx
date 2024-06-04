@@ -1,31 +1,51 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import LOGO from "@/public/assets/logo.svg";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Header() {
   return (
     <motion.header
       initial={{
-        y: "calc(-100% + -55px)",
+        top: "calc(-100% + -55px)",
       }}
       animate={{
-        y: 0,
+        top: 0,
       }}
-      transition={{ duration: 1.5, type: "just" }}
-      className="relative bg-light_blue h-[140px] bg-opacity-40"
+      transition={{ duration: 1.5, type: "tween" }}
+      className="max-[640px]:hidden absolute top-0 bg-light_blue h-[140px] w-full z-[99999999]"
     >
       <nav className="bg-dark_blue text-white flex items-center justify-between pt-[40px] pb-[20px]">
         <ul className="flex items-center justify-evenly flex-1 text-[18px]">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/"}>Packages</Link>
+          <Link
+            className="transition duration-300 ease-in-out hover:text-light_blue"
+            href={"/"}
+          >
+            Home
+          </Link>
+          <Link
+            className="transition duration-300 ease-in-out hover:text-light_blue"
+            href={"/packages"}
+          >
+            Packages
+          </Link>
         </ul>
 
         <ul className="flex items-center justify-evenly flex-1 text-[18px]">
-          <Link href={"/"}>About us</Link>
-          <Link href={"/"}>Contact</Link>
+          <Link
+            className="transition duration-300 ease-in-out hover:text-light_blue"
+            href={"/about"}
+          >
+            About us
+          </Link>
+          <Link
+            className="transition duration-300 ease-in-out hover:text-light_blue"
+            href={"/contact"}
+          >
+            Contact
+          </Link>
         </ul>
       </nav>
 
