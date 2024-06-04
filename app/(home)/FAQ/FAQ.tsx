@@ -73,7 +73,7 @@ export default function FAQ() {
             <p
               style={{
                 height: active == idx ? "105px" : "0",
-                transitionDuration: active == idx ? "500ms" : "0ms",
+                transitionDuration: active == idx ? "500ms" : "",
               }}
               className="max-w-[815px] h-0 overflow-hidden transition-all duration-500 ease-out pl-[42px] pr-[20px] max-[880px]:text-[14px] max-[880px]:max-w-[500px] max-[340px]:text-[12px]"
             >

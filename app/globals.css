@@ -84,11 +84,17 @@ body {
   overflow-x: hidden;
 }
 
-.diamond-canvas {
+canvas {
   height: calc(100vh - 140px) !important;
+  z-index: 999999999999;
 }
 
-input {
+input,
+textarea,
+select,
+optgroup,
+option,
+button {
   outline: none;
 }
 

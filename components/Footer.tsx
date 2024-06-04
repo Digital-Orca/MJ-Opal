@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import FACEBOOK from "@/assets/facebook.svg";
 import INSTAGRAM from "@/assets/instagram.svg";
 import TWITTER from "@/assets/twitter.svg";
 import LOGO from "@/assets/logo.svg";
 import Link from "next/link";
+import useSubscribeForNewsletters from "@/hooks/useSubscribeForNewsletter";
+import { FormEvent } from "react";
 
 export default function Footer() {
+  const { email, setEmail, isLoading, sendMail } = useSubscribeForNewsletters();
+
   return (
     <footer className="relative container py-[40px] bg-dark_blue mt-10">
       <div className="relative grid grid-cols-5 text-white z-10 max-[768px]:gap-y-4">
@@ -14,15 +20,22 @@ export default function Footer() {
             Newsletter
           </h2>
 
-          <div className="relative flex items-center w-3/4 mt-2 mb-5 max-[1100px]:w-full max-[768px]:w-3/4 max-[768px]:mr-auto max-[450px]:w-full">
+          <form
+            onSubmit={(e: FormEvent<HTMLFormElement>) => sendMail(e)}
+            className="relative flex items-center w-3/4 mt-2 mb-5 max-[1100px]:w-full max-[768px]:w-3/4 max-[768px]:mr-auto max-[450px]:w-full"
+          >
             <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              type="email"
               placeholder="Enter your email..."
-              className="pl-4 bg-body rounded-[15px] w-full h-[55px] max-[1100px]:h-[45px] max-[450px]:text-[12px] max-[450px]:h-[35px] max-[340px]:pl-2"
+              className="text-dark_blue pl-4 bg-body rounded-[15px] w-full h-[55px] max-[1100px]:h-[45px] max-[450px]:text-[12px] max-[450px]:h-[35px] max-[340px]:pl-2"
             />
             <button className="absolute top-0 right-0 h-[55px] px-5 bg-light_blue text-dark_blue border border-dark_blue text-[20px] rounded-[15px] transition-all duration-300 ease-out hover:bg-opacity-75 max-[1100px]:text-[14px] max-[1100px]:h-[45px] max-[450px]:h-[35px] max-[450px]:text-[12px] max-[340px]:px-3">
-              Subscribe
+              {isLoading ? "Loading..." : "Subscribe"}
             </button>
-          </div>
+          </form>
 
           <ul className="flex items-center gap-x-4 self-start w-3/4 ml-auto max-[1100px]:w-full">
             <li className="cursor-pointer transition-all duration-300 ease-out hover:opacity-70">

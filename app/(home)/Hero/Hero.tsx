@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import HERO_IMAGE from "@/assets/hero.svg";
+import HERO_IMAGE from "@/assets/hero.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 

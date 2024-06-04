@@ -1,28 +1,11 @@
 "use client";
 
-import DiamondCanvas from "@/components/DiamondCanvas";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="relative h-screen flex items-center justify-center flex-col select-none">
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1.5,
-          type: "tween",
-        }}
-        viewport={{ once: true }}
-        className="absolute -top-40 max-[1200px]:-top-24 max-[980px]:-top-20 max-[525px]:-top-10 max-[350px]:-top-6 left-1/2 -translate-x-1/2"
-      >
-        <DiamondCanvas />
-      </motion.div>
+    <section className="about-services_section relative h-screen flex items-center justify-center flex-col">
       <motion.h1
         initial={{
           opacity: 0,
@@ -32,11 +15,10 @@ export default function About() {
         }}
         transition={{
           duration: 1.5,
-          delay: 0.5,
           type: "tween",
         }}
         viewport={{ once: true }}
-        className="!text-dark_blue text-[60px] w-[925px] text-center mx-auto mt-32 max-[1280px]:text-[50px] max-[980px]:text-[30px] max-[980px]:w-[700px] max-[768px]:text-[22px] max-[768px]:w-[500px] max-[525px]:text-[18px] max-[525px]:w-[300px] max-[350px]:w-[240px] max-[350px]:text-[14px]"
+        className="text-dark_blue text-[60px] w-[925px] text-center mx-auto max-[1280px]:text-[50px] max-[980px]:text-[30px] max-[980px]:w-[700px] max-[768px]:text-[22px] max-[768px]:w-[500px] max-[525px]:text-[18px] max-[525px]:w-[300px] max-[350px]:w-[240px] max-[350px]:text-[14px]"
       >
         IN THIS LIFE, YOU DON’T GET WHAT YOU DESERVE. ONLY WHAT YOU
       </motion.h1>
@@ -50,7 +32,6 @@ export default function About() {
         }}
         transition={{
           duration: 1.5,
-          delay: 1,
           type: "tween",
         }}
         viewport={{ once: true }}
