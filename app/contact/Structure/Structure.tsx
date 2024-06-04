@@ -64,7 +64,7 @@ export default function Structure() {
         </div>
         <div>
           <input
-            className="text-dark_blue  border border-light_blue rounded-md px-4 py-2 w-[300px] max-[460px]:w-[220px] placeholder:text-[14px]"
+            className="text-dark_blue border border-light_blue rounded-md px-4 py-2 w-[300px] max-[460px]:w-[220px] placeholder:text-[14px]"
             placeholder="Enter your email..."
             type="email"
             required

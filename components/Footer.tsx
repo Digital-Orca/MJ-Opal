@@ -81,7 +81,7 @@ export default function Footer() {
             <li>
               <Link
                 className="hover:text-light_blue hover:underline"
-                href={"/packagese"}
+                href={"/packages"}
               >
                 Packages
               </Link>
