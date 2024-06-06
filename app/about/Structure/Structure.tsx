@@ -24,7 +24,7 @@ export default function Structure() {
         }}
         viewport={{ once: true }}
       >
-        <h1 className="bg-gradient-to-r from-[#154C79] to-[#278CDF] flex items-center justify-center text-transparent bg-clip-text text-[60px] max-[1024px]:text-[50px]">
+        <h1 className="bg-gradient-to-br from-[#154C79] to-[#56b3ff] flex items-center justify-center text-transparent bg-clip-text text-[60px] max-[1024px]:text-[50px]">
           MJ{" "}
           <span className="ml-3">
             <Image

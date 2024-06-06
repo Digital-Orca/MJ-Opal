@@ -50,6 +50,7 @@ export default function useContactUs() {
       setIsLoading(false);
     } else if (!phone) {
       toast.error("Please Enter Your Phone Number");
+      setIsLoading
     } else if (phone && !phoneRegex.test(phone)) {
       toast.error("Please Enter a Valid Phone Number");
       setIsLoading(false);
@@ -68,7 +69,7 @@ export default function useContactUs() {
       if (data?.success) {
         toast.success("Thank You for Subscribing 🎉");
         setIsLoading(false);
-        setEmail("");
+
         window.scrollTo({
           top: 0,
         });

@@ -9,12 +9,12 @@ section .scroll div {
   background-color: #8FBEDC;
   white-space: nowrap;
   text-transform: uppercase;
-  animation: animate 40s linear infinite;
+  animation: animate 20s linear infinite;
 }
 
 section .scroll div:nth-child(2) {
-  animation: animate2 30s linear infinite;
-  animation-delay: -15s;
+  animation: animate2 20s linear infinite alternate;
+  animation-delay: -10s;
 }
 
 section .scroll div span {
@@ -24,27 +24,22 @@ section .scroll div span {
 
 section .scroll.text-1 {
   transform: rotate(30deg) translateY(200px) translateX(-200px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 section .scroll.text-2 {
   transform: rotate(-25deg) translateY(120px) translateX(-200px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 section .scroll.text-3 {
   transform: rotate(25deg) translateY(300px) translateX(-200px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 section .scroll.text-4 {
   transform: rotate(-2deg) translateY(-150px) translateX(-200px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 section .scroll.text-5 {
   transform: rotate(5deg) translateY(250px) translateX(-200px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes animate {
@@ -52,7 +47,7 @@ section .scroll.text-5 {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-70%);
     }
 }
 
@@ -61,6 +56,6 @@ section .scroll.text-5 {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-200%);
+      transform: translateX(-140%);
     }
 }

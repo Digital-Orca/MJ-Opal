@@ -69,6 +69,7 @@ export default function Structure() {
             type="email"
             required
             value={email}
+            autoComplete="email"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>

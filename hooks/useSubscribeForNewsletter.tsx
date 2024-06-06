@@ -25,6 +25,7 @@ export default function useSubscribeForNewsletters() {
 
     if (!email) {
       toast.error("Please Enter Your Email");
+      setIsLoading(false);
     } else if (email && !regex.test(email)) {
       toast.error("Please Enter a Valid Email");
       setIsLoading(false);

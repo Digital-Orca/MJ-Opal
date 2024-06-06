@@ -13,7 +13,7 @@ export default function FAQ() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="relative bg-dark_blue h-screen text-white pt-[28px] shadow-lg max-[880px]:h-[85vh] max-[440px]:h-[90vh] min-[1201px]:pl-[120px]">
+    <section className="relative bg-dark_blue text-white py-[40px] shadow-lg max-[880px]:h-[85vh] max-[440px]:h-[90vh] min-[1201px]:pl-[120px]">
       <motion.h1
         initial={{
           opacity: 0,
@@ -114,15 +114,6 @@ export default function FAQ() {
             width={330}
           />
         </motion.div>
-      </div>
-
-      <div className="absolute top-[525px] -z-10 max-[880px]:hidden">
-        <Image
-          src={FAQ_RECTANGLE}
-          alt="FAQ Rectangle Image"
-          width={1440}
-          height={100}
-        />
       </div>
     </section>
   );

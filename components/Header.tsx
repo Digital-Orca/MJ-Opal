@@ -51,11 +51,12 @@ export default function Header() {
 
       <div className="flex items-center justify-center absolute left-1/2 top-[55px] -translate-x-1/2 bg-body rounded-full w-[125px] h-[125px] p-[6px]">
         <Image
-          className="w-full"
+          className="w-auto h-auto"
           src={LOGO}
           width={125}
           height={125}
           alt="Mj Opal Logo"
+          priority
         />
       </div>
     </motion.header>

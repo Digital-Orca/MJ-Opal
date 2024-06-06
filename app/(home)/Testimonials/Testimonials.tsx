@@ -23,11 +23,11 @@ export default function Testimonials() {
   }, [active]);
 
   return (
-    <section className="h-screen pt-[150px]">
+    <section className="py-[150px]">
       {/* Section Title */}
-      <h1 className="relative text-dark_blue text-[55px] mb-[50px] min-[601px]:pl-[130px] max-[600px]:text-[35px] max-[600px]:text-center max-[600px]:w-fit max-[600px]:mx-auto">
+      <h1 className="relative text-dark_blue text-[55px] mb-20 max-[600px]:text-[35px] w-fit mx-auto max-[600px]:w-fit max-[600px]:mx-auto">
         Testimonials
-        <div className="absolute w-[105px] h-[105px] rounded-full border-[12px] border-light_blue -top-7 min-[601px]:left-[78px] max-[600px]:-left-[65px] -z-10 max-[380px]:hidden"></div>
+        <div className="absolute w-[105px] h-[105px] rounded-full border-[12px] border-light_blue -top-7 min-[601px]:left-[-58px] max-[600px]:-left-[65px] -z-10 max-[380px]:hidden"></div>
       </h1>
 
       <div className="relative w-[500px] max-[768px]:w-max mx-auto">
@@ -153,7 +153,8 @@ export default function Testimonials() {
               return prev > 0 ? prev - 1 : 0;
             })
           }
-          className="absolute -left-[80px] top-1/2 -translate-y-1/2 bg-light_blue rounded-full p-1 max-[768px]:-left-[40px] max-[380px]:top-[calc(100%+24px)] max-[380px]:left-[35%] max-[380px]:-translate-[35%]"
+          disabled={active == 0}
+          className="absolute -left-[80px] top-1/2 -translate-y-1/2 bg-light_blue rounded-full p-1 max-[768px]:-left-[40px] max-[380px]:top-[calc(100%+24px)] max-[380px]:left-[35%] max-[380px]:-translate-[35%] disabled:opacity-50"
         >
           <ChevronLeft
             size={40}
@@ -166,7 +167,8 @@ export default function Testimonials() {
               return prev < 5 ? prev + 1 : 5;
             });
           }}
-          className="absolute -right-[80px] top-1/2 -translate-y-1/2 bg-light_blue rounded-full p-1 max-[768px]:-right-[45px] max-[380px]:top-[calc(100%+24px)] max-[380px]:right-[35%] max-[380px]:translate-[35%]"
+          className="absolute -right-[80px] top-1/2 -translate-y-1/2 bg-light_blue rounded-full p-1 max-[768px]:-right-[45px] max-[380px]:top-[calc(100%+24px)] max-[380px]:right-[35%] max-[380px]:translate-[35%] disabled:opacity-50"
+          disabled={active == 5}
         >
           <ChevronRight
             size={40}

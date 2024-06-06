@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative h-[calc(100vh+140px)] max-[1140px]:h-[calc(75vh+140px)] pt-[280px] min-[841px]:pl-[100px] max-[840px]:pt-[230px] max-[340px]:pt-[210px]">
+    <section className="relative py-[280px] flex items-center max-[840px]:justify-center min-[841px]:pl-[100px] max-[840px]:pt-[370px] max-[340px]:pt-[210px]">
       <div className="text-[#565656] space-y-4 max-[840px]:flex max-[840px]:flex-col max-[840px]:items-center max-[980px]:px-4">
         <motion.h2
           initial={{
@@ -44,7 +44,7 @@ export default function Hero() {
             type: "tween",
           }}
           viewport={{ once: true }}
-          className="max-w-[600px] max-[980px]:max-w-[450px] leading-7 max-[500px]:text-[14px] max-[500px]:max-w-[400px] max-[500px]:text-center"
+          className="max-w-[600px] max-[1050px]:max-w-[450px] leading-7 max-[500px]:text-[14px] max-[500px]:max-w-[400px] max-[500px]:text-center"
         >
           Like you, we&apos;ve faced challenges on the way. MJ Opal was born as
           a result of some setbacks despite our best efforts.
@@ -87,7 +87,7 @@ export default function Hero() {
         >
           <Link
             href={"/packages"}
-            className="block w-fit text-white px-8 py-3 rounded-md bg-dark_blue transition duration-500 ease-in-out hover:bg-opacity-85 max-[500px]:text-[14px] max-[500px]:px-6"
+            className="block w-fit text-white px-8 py-3 rounded-md bg-dark_blue transition duration-500 ease-in-out hover:bg-opacity-85 max-[500px]:text-[14px] max-[500px]:px-6 mt-4"
           >
             Let&apos;s Go
           </Link>
@@ -111,14 +111,14 @@ export default function Hero() {
           type: "tween",
         }}
         viewport={{ once: true }}
-        className="max-[840px]:hidden absolute top-[140px] right-0"
+        className="max-[840px]:hidden absolute top-[180px] right-0 max-[1200px]:top-[200px] max-[950px]:top-[250px]"
       >
         <Image
           src={HERO_IMAGE}
           alt={"Hero Section Image"}
           width={450}
           height={400}
-          className="max-[1140px]:w-[300px]"
+          className="max-[1200px]:w-[350px] max-[950px]:w-[250px]"
         />
       </motion.div>
     </section>

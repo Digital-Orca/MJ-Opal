@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="about-services_section relative h-screen flex items-center justify-center flex-col">
+    <section className="about-services_section py-32 relative flex items-center justify-center flex-col">
       <motion.h1
         initial={{
           opacity: 0,
