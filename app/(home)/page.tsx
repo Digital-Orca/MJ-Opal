@@ -1,9 +1,9 @@
-import About from "./About/About";
-import FAQ from "./FAQ/FAQ";
-import Services from "./Services/Services";
-import Newsletter from "./Newsletter/Newsletter";
-import Testimonials from "./Testimonials/Testimonials";
-import Hero from "./Hero/Hero";
+import AboutPackages from "./_components/AboutPackages/AboutPackages";
+import FAQ from "./_components/FAQ/FAQ";
+import Services from "./_components/Services/Services";
+import Newsletter from "./_components/Newsletter/Newsletter";
+import Testimonials from "./_components/Testimonials/Testimonials";
+import Hero from "./_components/Hero/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,8 +38,8 @@ function Home() {
   return (
     <main>
       <Hero />
-      <Services />
-      <About />
+      {/* <Services /> */}
+      <AboutPackages />
       <FAQ />
       <Testimonials />
       <Newsletter />

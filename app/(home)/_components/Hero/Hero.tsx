@@ -7,7 +7,26 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative py-[280px] flex items-center max-[840px]:justify-center min-[841px]:pl-[100px] max-[840px]:pt-[370px] max-[340px]:pt-[210px]">
+    <section className="relative min-[841px]:h-[calc(100vh)] py-[280px] flex items-center max-[840px]:justify-center min-[841px]:pl-[100px] max-[840px]:pt-[370px]">
+      <svg className="trail-container">
+        <path d="" className="" style={{ stroke: "#8FBEDC" }}></path>
+      </svg>
+      <svg className="trail-container">
+        <path d="" className="" style={{ stroke: "#154C79" }}></path>
+      </svg>
+      <svg className="trail-container">
+        <path d="" className="" style={{ stroke: "#565656" }}></path>
+      </svg>
+      <svg className="trail-container">
+        <path d="" className="" style={{ stroke: "#3974a5" }}></path>
+      </svg>
+      <svg className="trail-container">
+        <path d="" className="" style={{ stroke: "#232a8a" }}></path>
+      </svg>
+      <svg className="trail-container">
+        <path d="" className="" style={{ stroke: "#038ad8" }}></path>
+      </svg>
+
       <div className="text-[#565656] space-y-4 max-[840px]:flex max-[840px]:flex-col max-[840px]:items-center max-[980px]:px-4">
         <motion.h2
           initial={{
@@ -44,7 +63,7 @@ export default function Hero() {
             type: "tween",
           }}
           viewport={{ once: true }}
-          className="max-w-[600px] max-[1050px]:max-w-[450px] leading-7 max-[500px]:text-[14px] max-[500px]:max-w-[400px] max-[500px]:text-center"
+          className="font-sans font-semibold max-w-[600px] text-[20px] max-[1050px]:max-w-[450px] leading-8 max-[500px]:text-[16px] max-[500px]:max-w-[400px] max-[1050px]:text-center max-[1050px]:mx-auto"
         >
           Like you, we&apos;ve faced challenges on the way. MJ Opal was born as
           a result of some setbacks despite our best efforts.
@@ -65,7 +84,7 @@ export default function Hero() {
             type: "tween",
           }}
           viewport={{ once: true }}
-          className="max-w-[500px] max-[980px]:max-w-[400px] leading-7 max-[500px]:text-[14px] max-[500px]:max-w-[350px] max-[500px]:text-center"
+          className="font-sans font-semibold max-w-[500px] text-[20px] max-[1050px]:max-w-[450px] leading-8 max-[500px]:text-[16px] max-[500px]:max-w-[350px] max-[1050px]:text-center max-[1050px]:mx-auto"
         >
           Determined to turn our experiences to serve your business&apos;s needs
           with our team to make you shine.
@@ -87,7 +106,7 @@ export default function Hero() {
         >
           <Link
             href={"/packages"}
-            className="block w-fit text-white px-8 py-3 rounded-md bg-dark_blue transition duration-500 ease-in-out hover:bg-opacity-85 max-[500px]:text-[14px] max-[500px]:px-6 mt-4"
+            className="font-sans font-semibold block w-fit text-white px-9 py-[14px] rounded-md bg-dark_blue transition duration-500 ease-in-out hover:bg-opacity-85 max-[500px]:text-[14px] max-[500px]:px-6 mt-6"
           >
             Let&apos;s Go
           </Link>
@@ -111,7 +130,7 @@ export default function Hero() {
           type: "tween",
         }}
         viewport={{ once: true }}
-        className="max-[840px]:hidden absolute top-[180px] right-0 max-[1200px]:top-[200px] max-[950px]:top-[250px]"
+        className="max-[840px]:hidden absolute top-[250px] right-0 max-[1200px]:top-[300px] max-[950px]:top-[350px]"
       >
         <Image
           src={HERO_IMAGE}

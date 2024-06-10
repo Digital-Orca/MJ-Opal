@@ -23,6 +23,7 @@ export default function Structure() {
           type: "tween",
         }}
         viewport={{ once: true }}
+        className="mb-16"
       >
         <h1 className="bg-gradient-to-br from-[#154C79] to-[#56b3ff] flex items-center justify-center text-transparent bg-clip-text text-[60px] max-[1024px]:text-[50px]">
           MJ{" "}
@@ -38,7 +39,7 @@ export default function Structure() {
           PAL
         </h1>
 
-        <p className="text-[#565656] max-w-[750px] leading-8 mx-auto text-center mt-6 mb-12 max-[1024px]:max-w-[700px] max-[725px]:px-5 max-[725px]:text-[15px] max-[450px]:text-[14px]">
+        <p className="font-sans font-semibold text-[22px] px-4 max-w-[1400px] text-[#565656] w-full leading-8 mx-auto text-center mt-6 max-[1024px]:text-[20px] max-[450px]:text-[16px]">
           It all started when we gave E-commerce a shot and it all went wrong!
           Couple of years ago, we launched our E-commerce store. Despite our
           efforts, we didn&apos;t get the conversion rates of our dreams so we
@@ -46,7 +47,7 @@ export default function Structure() {
         </p>
       </motion.div>
 
-      <div className="px-[100px] max-[768px]:px-[20px] text-[#565656]">
+      <div className="px-[100px] max-[1024px]:px-[30px] max-[768px]:px-[20px] text-[#565656]">
         <div className="flex items-center justify-between max-[768px]:flex-col">
           <motion.div
             initial={{
@@ -89,14 +90,14 @@ export default function Structure() {
               bounce: 0.3,
             }}
             viewport={{ once: true }}
-            className="w-[50%] space-y-3 max-[768px]:w-full"
+            className="w-[50%] space-y-5 max-[768px]:w-full"
           >
-            <h3 className="max-w-[500px] text-[24px] max-[1024px]:text-[18px] leading-8 max-[768px]:mt-4 max-[768px]:text-center max-[450px]:text-[16px]">
+            <h3 className="max-w-[600px] max-[768px]:max-w-max max-[768px]:mx-auto text-[28px] max-[1024px]:text-[18px] leading-8 max-[768px]:mt-4 max-[768px]:text-center max-[450px]:text-[16px]">
               You would think that we just left E-commerce and went to a 9-5 job
               right?
             </h3>
 
-            <p className="leading-[26px] max-w-[500px] max-[1024px]:text-[14px] max-[450px]:text-[12px] max-[768px]:text-center">
+            <p className="font-sans font-semibold leading-9 text-[18px] max-[1140px]:text-[16px] max-[1140px]:leading-8 max-[900px]:leading-7 max-w-[600px] max-[768px]:max-w-max max-[450px]:leading-[26px] max-[450px]:text-[15px] max-[768px]:text-center">
               But no, we invested in our efforts and time to discover what we
               did wrong. We learnt from our mistakes and we decided to help
               businesses of any level to avoid these mistakes with the help of
@@ -106,7 +107,7 @@ export default function Structure() {
         </div>
       </div>
 
-      <div className="px-[100px] max-[768px]:px-[20px] text-[#565656] mt-12 flex items-center justify-between max-[768px]:flex-col-reverse">
+      <div className="px-[100px] max-[1024px]:px-[30px] max-[768px]:px-[20px] text-[#565656] mt-12 flex items-center justify-between max-[768px]:flex-col-reverse">
         <motion.div
           initial={{
             translateX: "-100%",
@@ -126,7 +127,7 @@ export default function Structure() {
           }}
           className="w-[50%] space-y-3 max-[768px]:w-full"
         >
-          <p className="max-w-[500px] leading-[26px] max-[1024px]:text-[14px] max-[450px]:text-[12px] max-[768px]:mt-6 max-[768px]:text-center">
+          <p className="font-sans font-semibold w-full leading-9 text-[20px] max-[1140px]:text-[18px] max-[1140px]:leading-8 max-[900px]:text-[16px] max-[900px]:leading-7 max-[450px]:text-[15px] max-[450px]:leading-[26px] max-[768px]:mt-6 max-[768px]:text-center">
             This experience inspired us with our famous quote Grow Win Shine,
             every online business should keep on dreaming for success and
             uniqueness. But the struggle is real, picture a digital battleground
@@ -159,7 +160,7 @@ export default function Structure() {
           className="w-[45%] max-[768px]:w-full"
         >
           <Image
-            className="w-full object-cover rounded-md max-[768px]:w-full"
+            className="w-[80%] ml-auto object-cover rounded-md max-[1250px]:w-full aspect-square"
             src={ABOUT_2}
             alt="About Section Image-2"
             width={400}

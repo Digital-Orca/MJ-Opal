@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import FAQ from "../(home)/FAQ/FAQ";
-import Newsletter from "../(home)/Newsletter/Newsletter";
+import FAQ from "../(home)/_components/FAQ/FAQ";
+import Newsletter from "../(home)/_components/Newsletter/Newsletter";
 import Structure from "./Structure/Structure";
 
 export const metadata: Metadata = {

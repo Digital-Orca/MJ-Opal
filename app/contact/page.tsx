@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="flex items-center justify-center pt-[180px] max-[1024px]:flex-col-reverse max-[1024px]:pt-[80px] max-[530px]:pt-[0px]">
+    <main className="pt-[180px] max-[1024px]:pt-[180px] max-[530px]:pt-[180px]">
       <Structure />
     </main>
   );

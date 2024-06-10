@@ -11,7 +11,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-export default function EarthModel(props) {
+export default function EarthModel(props, { scale, position, rotation }) {
   const { nodes, materials } = useGLTF("/earth/earth.gltf");
 
   const modelRef = useRef();
@@ -28,9 +28,9 @@ export default function EarthModel(props) {
       <mesh
         castShadow
         receiveShadow
-        position={[0, 1.5, 0]}
-        rotation={[0.3, 0, 0]}
-        scale={1.8}
+        position={position ? position : [0, 1.5, 0]}
+        rotation={rotation ? rotation : [0.3, 0, 0]}
+        scale={scale ?? 1.8}
         geometry={nodes.Object_4.geometry}
         material={materials["Scene_-_Root"]}
       />

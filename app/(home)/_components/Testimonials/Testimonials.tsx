@@ -57,8 +57,8 @@ export default function Testimonials() {
                     height={65}
                   />
                 </div>
-                <div className="p-5">
-                  <p className="line-clamp-3 text-[18px] text-dark_blue leading-8 max-[768px]:text-[14px]">
+                <div className="p-5 h-[235px]">
+                  <p className="font-sans font-semibold text-[18px] text-dark_blue leading-8 max-[768px]:text-[14px]">
                     {o.opinion}
                   </p>
                 </div>
@@ -91,8 +91,8 @@ export default function Testimonials() {
                     height={65}
                   />
                 </div>
-                <div className="p-5">
-                  <p className="line-clamp-3 text-[18px] text-dark_blue leading-8 max-[768px]:text-[14px]">
+                <div className="p-5 h-[360px]">
+                  <p className="font-sans font-semibold text-[18px] text-dark_blue leading-8 max-[768px]:text-[14px]">
                     {o.opinion}
                   </p>
                 </div>

@@ -38,7 +38,7 @@ export const FAQS = [
   },
   {
     ques: "What sets you apart from other agencies?",
-    ans: `At MJ Opal, we&apos;re all about fresh ideas, personal plans, and
+    ans: `At MJ Opal, we're all about fresh ideas, personal plans, and
     making things happen. We take the time to get to know your business
     inside and out, creating solutions that work just for you. Our aim? To
     make every cent you spend count, while helping you shine brighter than

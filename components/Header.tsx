@@ -49,7 +49,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      <div className="flex items-center justify-center absolute left-1/2 top-[55px] -translate-x-1/2 bg-body rounded-full w-[125px] h-[125px] p-[6px]">
+      <Link href={"/"} className="flex items-center justify-center absolute left-1/2 top-[55px] -translate-x-1/2 bg-white rounded-full w-[125px] h-[125px] p-[6px]">
         <Image
           className="w-auto h-auto"
           src={LOGO}
@@ -58,7 +58,7 @@ export default function Header() {
           alt="Mj Opal Logo"
           priority
         />
-      </div>
+      </Link>
     </motion.header>
   );
 }

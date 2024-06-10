@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="about-services_section py-32 relative flex items-center justify-center flex-col">
+    <section className="about-services_section py-64 relative flex items-center justify-center flex-col">
       <motion.h1
         initial={{
           opacity: 0,
@@ -18,9 +18,9 @@ export default function About() {
           type: "tween",
         }}
         viewport={{ once: true }}
-        className="text-dark_blue text-[60px] w-[925px] text-center mx-auto max-[1280px]:text-[50px] max-[980px]:text-[30px] max-[980px]:w-[700px] max-[768px]:text-[22px] max-[768px]:w-[500px] max-[525px]:text-[18px] max-[525px]:w-[300px] max-[350px]:w-[240px] max-[350px]:text-[14px]"
+        className="text-dark_blue text-[60px] w-[925px] text-center mx-auto max-[1280px]:text-[50px] max-[980px]:text-[30px] max-[980px]:w-[700px] max-[768px]:text-[22px] max-[768px]:w-[500px] max-[525px]:text-[18px] max-[525px]:w-[300px] max-[350px]:w-[240px]"
       >
-        IN THIS LIFE, YOU DON’T GET WHAT YOU DESERVE. ONLY WHAT YOU
+        In this life, you don’t get what you deserve. Only what you strive for.
       </motion.h1>
 
       <motion.div
