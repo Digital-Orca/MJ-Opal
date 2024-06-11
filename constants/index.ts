@@ -1,4 +1,4 @@
-export const services_we_provider_left = [
+export const services_we_provide_left = [
   "Fashion",
   "E-Commerce",
   "Brands",
@@ -8,7 +8,7 @@ export const services_we_provider_left = [
   "Podcasts",
 ];
 
-export const services_we_provider_center = [
+export const services_we_provide_center = [
   "E-Commerce",
   "Brands",
   "Influencers",
@@ -18,7 +18,7 @@ export const services_we_provider_center = [
   "Fashion",
 ];
 
-export const services_we_provider_right = [
+export const services_we_provide_right = [
   "Brands",
   "Influencers",
   "Advertisement",
@@ -87,7 +87,7 @@ export const testimonials_data = [
   },
   {
     personName: "Nader B.",
-    opinion: `I worked with you on my core product and i have to say your dedication, inputu, advice and experience has ekevated the brand content. Your willingness to go over and beyond to support the objective of the business is exquisite. You guys are highly recommended for elevating brands to perfection`,
+    opinion: `I worked with you on my core product and i have to say your dedication, inputu, advice and experience has ekevated the brand content. Your willingness to go over and beyond to support the objective of the business is exquisite. You guys are highly recommended.`,
   },
   {
     personName: "Layla K.",

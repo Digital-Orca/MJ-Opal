@@ -5,6 +5,7 @@ import Newsletter from "./_components/Newsletter/Newsletter";
 import Testimonials from "./_components/Testimonials/Testimonials";
 import Hero from "./_components/Hero/Hero";
 import { Metadata } from "next";
+import Test from "./_components/Testimonials/Test";
 
 export const metadata: Metadata = {
   title: "MJ Opal - Home Page",
@@ -38,10 +39,10 @@ function Home() {
   return (
     <main>
       <Hero />
-      {/* <Services /> */}
+      <Services />
       <AboutPackages />
       <FAQ />
-      <Testimonials />
+      <Test />
       <Newsletter />
     </main>
   );

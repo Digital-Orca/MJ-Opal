@@ -1,61 +1,7 @@
-section .scroll {
-  width: 100%;
-  display: flex;
-}
-
-section .scroll div {
-  color: #000;
-  font-size: 4rem;
-  background-color: #8FBEDC;
-  white-space: nowrap;
-  text-transform: uppercase;
-  animation: animate 20s linear infinite;
-}
-
-section .scroll div:nth-child(2) {
-  animation: animate2 20s linear infinite alternate;
-  animation-delay: -10s;
-}
-
-section .scroll div span {
-  -webkit-text-stroke: 1px #000;
-  color: transparent;
-}
-
-section .scroll.text-1 {
-  transform: rotate(30deg) translateY(200px) translateX(-200px);
-}
-
-section .scroll.text-2 {
-  transform: rotate(-25deg) translateY(120px) translateX(-200px);
-}
-
-section .scroll.text-3 {
-  transform: rotate(25deg) translateY(300px) translateX(-200px);
-}
-
-section .scroll.text-4 {
-  transform: rotate(-2deg) translateY(-150px) translateX(-200px);
-}
-
-section .scroll.text-5 {
-  transform: rotate(5deg) translateY(250px) translateX(-200px);
-}
-
-@keyframes animate {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-70%);
-    }
-}
-
-@keyframes animate2 {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-140%);
-    }
+.services_we_provide {
+  background-image: url("../../../../assets/services_we_provide_section.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1440/660;
 }

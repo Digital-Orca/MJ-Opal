@@ -1,22 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import LOGO from "@/assets/logo.svg";
 import Link from "next/link";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function MobileHeader() {
+  useGSAP(() => {
+    gsap.to("header", {
+      top: 0,
+      opacity: 1,
+      duration: 1,
+      delay: window.location.href.includes("contact") ? 1 : 0,
+      ease: "power2.out",
+    });
+  });
+
   return (
-    <motion.header
-      initial={{
-        top: "calc(-100% + -55px)",
-      }}
-      animate={{
-        top: 0,
-      }}
-      transition={{ duration: 1.5, type: "tween" }}
-      className="hidden max-[640px]:container max-[430px]:px-0 max-[640px]:mx-auto max-[640px]:flex max-[430px]:flex-col max-[640px]:items-center max-[640px]:justify-between max-[430px]:justify-evenly absolute top-0 bg-dark_blue h-[140px] max-[530px]:h-[100px] max-[430px]:h-[140px] w-full z-[99999999]"
-    >
+    <header className="hidden max-[640px]:container max-[430px]:px-0 max-[640px]:mx-auto max-[640px]:flex max-[430px]:flex-col max-[640px]:items-center max-[640px]:justify-between max-[430px]:justify-evenly absolute top-[calc(-100% + -55px)] bg-dark_blue h-[140px] max-[530px]:h-[100px] max-[430px]:h-[140px] w-full z-[99999999]">
       <div>
         <Image
           className="w-[100px] max-[530px]:w-[70px]"
@@ -38,9 +40,9 @@ export default function MobileHeader() {
 
           <Link
             className="transition duration-300 ease-in-out hover:text-light_blue"
-            href={"/packages"}
+            href={"/portfolio"}
           >
-            Packages
+            Portfolio
           </Link>
 
           <Link
@@ -58,6 +60,6 @@ export default function MobileHeader() {
           </Link>
         </ul>
       </nav>
-    </motion.header>
+    </header>
   );
 }

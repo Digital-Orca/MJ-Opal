@@ -4,32 +4,31 @@ import Image from "next/image";
 import INSTAGRAM from "@/assets/instagram.svg";
 import Link from "next/link";
 import useSubscribeForNewsletters from "@/hooks/useSubscribeForNewsletter";
-import LOGO from '@/assets/logo.svg';
+import LOGO from "@/assets/logo.svg";
+import gsap from "gsap";
 import { FormEvent } from "react";
-import { motion } from "framer-motion";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
   const { email, setEmail, isLoading, sendMail } = useSubscribeForNewsletters();
 
+  useGSAP(() => {
+    gsap.to("footer", {
+      opacity: 1,
+      ease: "power2.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: "footer",
+      },
+    });
+  });
+
   return (
-    <motion.footer
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 2.5,
-        type: "spring",
-      }}
-      viewport={{
-        once: true,
-      }}
-      className="py-[40px] pt-[275px] mt-10 footer-bg h-[500px] max-[768px]:pt-[450px] max-[768px]:h-[300px] max-[768px]:bg-contain max-[768px]:bg-no-repeat max-[768px]:bg-bottom"
-    >
+    <footer className="py-[40px] pt-[275px] opacity-0 mt-10 footer-bg h-[500px] max-[768px]:pt-[240px] max-[768px]:h-[300px] max-[768px]:bg-contain max-[768px]:bg-no-repeat max-[768px]:bg-bottom">
       <div className="relative container bg-dark_blue max-[768px]:pb-[75px]">
-        <div className="relative grid grid-cols-5 text-white z-10 max-[768px]:gap-y-4">
+        <div className="relative grid grid-cols-5 gap-8 text-white z-10 max-[768px]:gap-y-4 max-[768px]:gap-x-0">
           <div className="col-span-2 flex flex-col max-[768px]:col-span-5">
             <h2 className="text-[35px] self-start w-3/4 max-[1100px]:w-full max-[450px]:text-[25px]">
               Newsletter
@@ -79,7 +78,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="font-sans font-semibold col-span-2 max-[768px]:col-span-3 flex justify-center gap-x-16 mt-10 max-[768px]:justify-start max-[768px]:gap-x-10 max-[450px]:gap-x-5 max-[450px]:mt-5 max-[340px]:col-span-5 max-[340px]:mb-6">
+          <div className="font-sans font-semibold max-[1128px]:col-span-2 col-span-1 max-[768px]:col-span-3 flex gap-x-16 mt-10 max-[768px]:justify-start max-[768px]:gap-x-10 max-[450px]:gap-x-5 max-[450px]:mt-5 max-[340px]:col-span-5 max-[340px]:mb-6">
             <ul className="space-y-4 text-[18px] max-[450px]:text-base">
               <li>
                 <Link
@@ -92,9 +91,9 @@ export default function Footer() {
               <li>
                 <Link
                   className="hover:text-light_blue hover:underline"
-                  href={"/packages"}
+                  href={"/portfolio"}
                 >
-                  Packages
+                  Portfolio
                 </Link>
               </li>
             </ul>
@@ -118,7 +117,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          <Link href={"/"} className="flex flex-col items-center max-[768px]:col-span-2 max-[340px]:col-span-5 max-[340px]:items-start min-[900px]:-mt-7">
+          <Link
+            href={"/"}
+            className="col-span-2 max-[1128px]:col-span-1 flex flex-col items-center max-[768px]:col-span-2 max-[340px]:col-span-5 max-[340px]:items-start min-[900px]:-mt-7"
+          >
             <Image
               className="max-[900px]:w-[90px] max-[450px]:w-[60px]"
               src={LOGO}
@@ -126,12 +128,12 @@ export default function Footer() {
               width={110}
               height={130}
             />
-            <h1 className="text-[50px] text-center max-[1200px]:text-[40px] max-[900px]:text-[25px] max-[450px]:text-[16px] max-[340px]:text-left">
+            <h1 className="text-[50px] text-center max-[1200px]:text-[40px] max-[1030px]:text-[30px] max-[900px]:text-[25px] max-[450px]:text-[16px] max-[340px]:text-left">
               MJ OPAL
             </h1>
           </Link>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }

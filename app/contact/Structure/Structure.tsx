@@ -2,10 +2,13 @@
 
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { motion } from "framer-motion";
 import { FormEvent, Suspense } from "react";
 import EarthModel from "@/public/earth/Earth";
 import useContactUs from "@/hooks/useContactUs";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Structure() {
   const {
@@ -21,40 +24,69 @@ export default function Structure() {
     isLoading,
   } = useContactUs();
 
+  useGSAP(() => {
+    gsap.fromTo(
+      ".contact-heading",
+      {
+        opacity: 0,
+        y: -100,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        delay: "1",
+        ease: "power3.out",
+      }
+    );
+
+    gsap.fromTo(
+      ".contact-form",
+      {
+        opacity: 0,
+        x: "-100%",
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        delay: "1",
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact-form",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".earth",
+      {
+        opacity: 0,
+        x: "100%",
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+        delay: "1",
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".earth",
+        },
+      }
+    );
+  });
+
   return (
     <>
-      <motion.h1
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 1,
-          delay: 0.5,
-          type: "tween",
-        }}
-        className="relative -z-[9999999] bg-gradient-to-r from-[#154C79] to-[#56b3ff] flex items-center justify-center text-transparent bg-clip-text text-[60px] max-w-[1000px] mx-auto text-center px-5 max-[1024px]:text-[40px] max-[768px]:text-[28px] max-[340px]:text-[22px] -mb-28"
-      >
+      <h1 className="contact-heading relative z-[9999999] bg-gradient-to-r from-[#154C79] to-[#56b3ff] flex items-center justify-center text-transparent bg-clip-text text-[60px] max-w-[1000px] mx-auto text-center px-5 max-[1024px]:text-[40px] max-[768px]:text-[28px] max-[340px]:text-[22px] -mb-28">
         Just a quick form away from getting in touch with our team
-      </motion.h1>
+      </h1>
 
-      <div className="flex items-center justify-center max-[1024px]:flex-col-reverse relative -z-[9999999]">
-        <motion.form
-          initial={{
-            translateX: "-100%",
-            opacity: 0,
-          }}
-          whileInView={{
-            translateX: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-            type: "spring",
-            bounce: 0.3,
-            delay: 1.5,
-          }}
-          viewport={{ once: true }}
+      <div className="flex items-center justify-center max-[1024px]:flex-col-reverse relative z-[9999999]">
+        <form
           onSubmit={(e: FormEvent<HTMLFormElement>) => sendMail(e)}
-          className="font-sans font-semibold space-y-4 flex flex-col items-end w-[90%] max-[1024px]:w-full max-[1024px]:items-center max-[768px]:-mt-32"
+          className="contact-form font-sans font-semibold space-y-4 flex flex-col items-end w-[90%] max-[1024px]:w-full max-[1024px]:items-center max-[768px]:-mt-32"
         >
           <div>
             <input
@@ -100,28 +132,9 @@ export default function Structure() {
           <button className="text-white bg-dark_blue px-6 py-2 rounded-md">
             {isLoading ? "Loading..." : "Send"}
           </button>
-        </motion.form>
+        </form>
 
-        <motion.div
-          initial={{
-            translateX: "100%",
-            opacity: 0,
-          }}
-          whileInView={{
-            translateX: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-            type: "spring",
-            bounce: 0.3,
-            delay: 1.5,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="max-[530px]:hidden max-[530px]:mt-[40px] max-[430px]:mt-[70px] max-[1024px]:w-full w-[60%] relative -z-[9999999]"
-        >
+        <div className="earth max-[530px]:hidden max-[530px]:mt-[40px] max-[430px]:mt-[70px] max-[1024px]:w-full w-[60%] relative -z-[9999999]">
           <Canvas>
             <ambientLight intensity={1} />
             <OrbitControls
@@ -135,28 +148,9 @@ export default function Structure() {
             </Suspense>
             <Environment preset="sunset" />
           </Canvas>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{
-            translateX: "100%",
-            opacity: 0,
-          }}
-          whileInView={{
-            translateX: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-            type: "spring",
-            bounce: 0.3,
-            delay: 1.5,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="hidden max-[530px]:block max-[1024px]:w-full w-[60%] -mt-32 overflow-x-hidden"
-        >
+        <div className="earth hidden max-[530px]:block max-[1024px]:w-full w-[60%] -mt-32 overflow-x-hidden">
           <Canvas>
             <ambientLight intensity={1} />
             <OrbitControls
@@ -170,7 +164,7 @@ export default function Structure() {
             </Suspense>
             <Environment preset="sunset" />
           </Canvas>
-        </motion.div>
+        </div>
       </div>
     </>
   );

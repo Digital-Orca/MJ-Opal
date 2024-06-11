@@ -6,6 +6,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import TESTIMONIALS_DIAMOND from "@/assets/testimonials_diamond.svg";
 import "./testimonials.css";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Testimonials() {
   const [active, setActive] = useState(0);
@@ -17,13 +21,28 @@ export default function Testimonials() {
       } else {
         setActive(0);
       }
-    }, 7000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, [active]);
 
+  useGSAP(() => {
+    gsap.to(".testimonials", {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".testimonials",
+        start: "top center",
+        end: "bottom center",
+      },
+    });
+  });
+
   return (
-    <section className="py-[150px]">
+    <section className="testimonials opacity-0 -translate-y-[50px] py-[150px]">
       {/* Section Title */}
       <h1 className="relative text-dark_blue text-[55px] mb-20 max-[600px]:text-[35px] w-fit mx-auto max-[600px]:w-fit max-[600px]:mx-auto">
         Testimonials
