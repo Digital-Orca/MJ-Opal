@@ -12,7 +12,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
-  useGSAP(() => {    
+  useGSAP(() => {
     if (window.innerWidth >= 941) {
       gsap.fromTo(
         ".center-services",
@@ -32,10 +32,6 @@ export default function Services() {
             start: "top 85%",
             end: "bottom 15%",
             scrub: 1,
-            snap: {
-              duration: { min: 1.5, max: 3 },
-              delay: 0.5,
-            },
           },
         }
       );
@@ -58,10 +54,6 @@ export default function Services() {
             start: "top 80%",
             end: "bottom 25%",
             scrub: 1,
-            snap: {
-              duration: { min: 1.5, max: 3 },
-              delay: 0.5,
-            },
           },
         }
       );
@@ -69,7 +61,7 @@ export default function Services() {
   });
 
   return (
-    <section className="services_we_provide flex items-center justify-center w-full max-[1368px]:!aspect-[1860/1060] max-[1368px]:!aspect-[2260/1460] max-[940px]:h-[70vh]">
+    <section className="services_we_provide flex items-center justify-center w-full max-[1368px]:!aspect-[1860/1060] max-[940px]:h-[70vh]">
       <div className="flex items-center justify-between max-[940px]:justify-center w-full text-white px-10">
         <div className="max-[940px]:hidden flex flex-col gap-y-8">
           {services_we_provide_left.map((service) => (
@@ -91,7 +83,7 @@ export default function Services() {
                     : idx == 2
                     ? "1.875em"
                     : idx == 3
-                    ? "2.5em"
+                    ? "2em"
                     : idx == 4
                     ? "1.875em"
                     : idx == 5

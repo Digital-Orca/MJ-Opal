@@ -40,12 +40,12 @@ export default function FAQ() {
   });
 
   return (
-    <section className="relative bg-dark_blue text-white py-[40px] shadow-lg max-[880px]:h-[70vh] max-[440px]:h-[60vh] min-[1201px]:pl-[120px]">
+    <section className="relative bg-dark_blue text-white py-[40px] shadow-lg max-[880px]:min-h-[55vh] max-[500px]:min-h-[50vh] min-[1201px]:pl-[120px]">
       <h1 className="faq-fade-in opacity-0 text-[55px] mb-[30px] max-[1200px]:text-center max-[1200px]:mb-[50px]">
         FAQ
       </h1>
 
-      <div className="max-[1200px]:flex max-[1200px]:flex-col max-[1200px]:items-center space-y-5">
+      <div className="max-[1200px]:flex max-[1200px]:flex-col space-y-5">
         {FAQS.map((faq, idx) => (
           <div
             key={faq.ques}
@@ -59,7 +59,7 @@ export default function FAQ() {
                   setActive(idx);
                 }
               }}
-              className="relative w-fit text-[28px] cursor-pointer flex items-center gap-x-2 max-[880px]:text-[22px] max-[440px]:text-[14px]"
+              className="relative w-fit text-[28px] cursor-pointer flex items-center gap-x-2 max-[880px]:text-[22px] max-[500px]:text-[16px] max-[390px]:text-[14px]"
             >
               {/* Chevrons */}
               {idx === active ? <ChevronDown /> : <ChevronRight />}

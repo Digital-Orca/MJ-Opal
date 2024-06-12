@@ -5,29 +5,14 @@ import INSTAGRAM from "@/assets/instagram.svg";
 import Link from "next/link";
 import useSubscribeForNewsletters from "@/hooks/useSubscribeForNewsletter";
 import LOGO from "@/assets/logo.svg";
-import gsap from "gsap";
 import { FormEvent } from "react";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
   const { email, setEmail, isLoading, sendMail } = useSubscribeForNewsletters();
 
-  useGSAP(() => {
-    gsap.to("footer", {
-      opacity: 1,
-      ease: "power2.out",
-      duration: 1,
-      scrollTrigger: {
-        trigger: "footer",
-      },
-    });
-  });
-
   return (
-    <footer className="py-[40px] pt-[275px] opacity-0 mt-10 footer-bg h-[500px] max-[768px]:pt-[240px] max-[768px]:h-[300px] max-[768px]:bg-contain max-[768px]:bg-no-repeat max-[768px]:bg-bottom">
-      <div className="relative container bg-dark_blue max-[768px]:pb-[75px]">
+    <footer className="footer-bg pt-[275px] mt-10 min-[769px]:pb-[40px] min-[769px]:h-[500px] max-[768px]:mt-20 max-[768px]:bg-none max-[768px]:pt-0">
+      <div className="relative container bg-dark_blue max-[768px]:py-8">
         <div className="relative grid grid-cols-5 gap-8 text-white z-10 max-[768px]:gap-y-4 max-[768px]:gap-x-0">
           <div className="col-span-2 flex flex-col max-[768px]:col-span-5">
             <h2 className="text-[35px] self-start w-3/4 max-[1100px]:w-full max-[450px]:text-[25px]">

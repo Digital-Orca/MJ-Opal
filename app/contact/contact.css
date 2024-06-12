@@ -1,0 +1,11 @@
+@media screen and (max-height: 800px) {
+  form.contact-form {
+    @apply !-mt-20;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  h1.contact-heading {
+    @apply !-mb-14;
+  }
+}

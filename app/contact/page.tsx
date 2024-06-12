@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="pt-[180px] max-[1024px]:pt-[180px] max-[530px]:pt-[180px]">
+    <main className="pt-[220px]">
       <Structure />
     </main>
   );

@@ -1,31 +1,31 @@
 export const services_we_provide_left = [
-  "Fashion",
-  "E-Commerce",
-  "Brands",
-  "Influencers",
-  "Advertisement",
-  "Restaurants",
-  "Podcasts",
+  "Photography",
+  "Copywriting",
+  "Graphic Design",
+  "Branding",
+  "Advertising",
+  "Market Research",
+  "Web Development",
 ];
 
 export const services_we_provide_center = [
-  "E-Commerce",
-  "Brands",
-  "Influencers",
-  "Advertisement",
-  "Restaurants",
-  "Podcasts",
-  "Fashion",
+  "Market Research",
+  "Branding",
+  "Web Development",
+  "Advertising",
+  "Copywriting",
+  "Graphic Design",
+  "Photography",
 ];
 
 export const services_we_provide_right = [
-  "Brands",
-  "Influencers",
-  "Advertisement",
-  "Restaurants",
-  "Podcasts",
-  "Fashion",
-  "E-Commerce",
+  "Web Development",
+  "Advertising",
+  "Photography",
+  "Branding",
+  "Market Research",
+  "Copywriting",
+  "Graphic Design",
 ];
 
 export const FAQS = [
